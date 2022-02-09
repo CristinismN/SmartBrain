@@ -12,7 +12,7 @@ const image = require('./controllers/image');
 const db = knex({
     client: 'pg',
     connection: {
-      host : process.env.DATABASE_URL, //127.0.0.1 - since we're moving the DB on Heroku, localhost will not be needed anymore
+      connectionString : process.env.DATABASE_URL, //127.0.0.1 - since we're moving the DB on Heroku, localhost will not be needed anymore
       ssl:true
       //user : 'postgres',
       //password : 'crookshanks',
