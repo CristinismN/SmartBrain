@@ -31,7 +31,7 @@ const handleRegister = (req, res, db, bcrypt) => { //we're passing db, bcrypt to
     .then(trx.commit) // if all of the above pass, then commit ( send the transaction through)
     .catch(trx.rollback)
     })
-      .catch(err => res.status(400).json('unable to register'))
+      .catch(err => res.status(400).json('unable to register', err))
     // database.users.push({ 
     //     id: '125',
     //     name: name,
